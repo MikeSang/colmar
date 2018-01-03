@@ -1,0 +1,80 @@
+/* UNIVERSAL STYLES */
+
+html {
+
+}
+
+.container {
+  display: flex;
+  width: 100%;
+  margin-left: 24px;
+  margin-right: 24px;
+}
+
+/* NAV BAR */
+
+#navbar {
+  display: flex;
+  height: 64px;
+  background-color: #ffffff;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#navbarleft {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-family: Avenir, Arial, sans-serif;
+}
+
+#navbarleft img {
+  display: block;
+  height: 32px;
+  padding-left: 24px;
+}
+
+#navbarleft p {
+  display: block;
+  margin-left: 10px;
+}
+
+#navbarright {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-right: 10px;
+}
+
+#navbarright nav {
+  display: flex;
+}
+
+#navbarright a {
+  padding-left: 8px;
+  padding-right: 8px;
+  text-decoration-color: #ff0000;
+  font-family: Arial, sans-serif;
+}
+
+.navcontainer {
+  display: flex;
+}
+
+#navbarmobile {
+    display: none;
+  }
+
+@media screen and (max-width: 480px) {
+  #navbar {
+    display: none;
+  }
+
+  #navbarmobile {
+    display: flex;
+    align-content: center;
+    justify-content: space-around;
+  }
+}
