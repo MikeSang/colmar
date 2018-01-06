@@ -5,7 +5,7 @@
 /* UNIVERSAL STYLES | UNIVERSAL STYLES */
 
 html {
-
+/*  overflow-x: hidden; */
 }
 
 .container {
@@ -26,7 +26,7 @@ html {
 }
 
 h2 {
-  font-family: Avenir, Helvetica, sans-serif;
+  font-family: Crimson, Georgia, serif;
   font-size: 48px;
   font-weight: 800;
   margin-bottom: 15px;
@@ -34,7 +34,7 @@ h2 {
 
 h3 {
   font-family: Avenir, Helvetica, sans-serif;
-  font-size: 34px;
+  font-size: 36px;
   font-weight: 400;
   margin-bottom: 15px;
 }
@@ -53,8 +53,6 @@ h3 {
   color: #ffffff;
   justify-content: space-between;
   align-items: center;
-  padding-left: 5px;
-  padding-right: 5px;
   border-bottom: 2px solid #000000;
   z-index: 100;
 }
@@ -63,7 +61,7 @@ h3 {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  font-family: Avenir, Arial, sans-serif;
+  font-family: Crimson, Georgia, serif;
   margin-left: 24px;
 }
 
@@ -122,7 +120,7 @@ h3 {
     display: flex;
     position: fixed;
     align-content: center;
-    justify-content: center;
+    justify-content: space-between;
     width: 100%;
     height: 64px;
     background-color: #98002e;
@@ -149,10 +147,9 @@ h3 {
   position: relative;
   top: 64px;
   background-color: #bc9b6a;
-  padding: 32px 24px 32px 24px;
-  width: 100%;
-  justify-content: center;
-  align-items: center;
+  padding: 32px 12px 32px 12px;
+  justify-content: flex-start;
+  align-items: flex-start;
 }
 
 #topleft {
@@ -161,20 +158,19 @@ h3 {
 
 #top img {
   display: block;
-  width: 100%;
-  height: auto;
-  max-height: 400px;
+  max-width: 100%;
+
 }
 
 #topright {
   display: block;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   width: 40%;
+  max-width: 350px;
+  justify-content: flex-start;
   text-align: left;
   line-height: 2.8rem;
-  padding-left: 24px;
+  padding: 0px 24px 24px 24px;
 }
 
 #toprighttext {
@@ -195,36 +191,40 @@ h3 {
   color: #ffffff;
   font-family: Avenir, Helvetica, sans-serif;
   font-weight: 600;
-  text-align: center;
-  flex-wrap: nowrap;
 }
 
 @media screen and (max-width: 880px) {
 
-  h2, h3 {
+  h2 {
     font-size: 24px;
+    font-weight: bold;
+    line-height: 1.2;
+  }
+
+  h3 {
+    font-size: 20px;
+    font-weight: normal;
     line-height: 1.2;
   }
 }
 
-@media screen and (max-width: 540px) {
+@media screen and (max-width: 549px) {
 
   #top {
     flex-direction: column;
-    width: 100%;
     padding: 0px 0px 0px 0px;
   }
 
   #topleft {
     display: block;
     width: 100%;
-    height: auto;
     padding: 0px 0px 0px 0px;
   }
 
   #top img {
     display: block;
     width: 100%;
+    max-width: 100%;
     padding: 0px 0px 0px 0px;
   }
 
@@ -246,15 +246,20 @@ h3 {
 
   #topright #button {
     display: block;
-    max-width: 50;
-    margin: 16px 16px 16px 16px;
+    margin: 16px 25% 16px 25%;
     text-align: center;
     justify-content: center;
   }
 
   #toprighttext {
     display: block;
-    margin: 16px 16px 16px 16px;
+    margin: 32px 16px 16px 16px;
+    padding: 0px 0px 0px 0px;
+  }
+
+  #button {
+    margin-left: 25%;
+    margin-right: 25%;
   }
 }
 
@@ -264,19 +269,23 @@ h3 {
 /* MAIN CONTENT | MAIN CONTENT | MAIN CONTENT */
 /* MAIN CONTENT | MAIN CONTENT | MAIN CONTENT */
 
-#main {
-  display: block;
+#main, #thesis {
+  display: flex;
   position: relative;
   top: 64px;
   background-color: #c7bcac;
-  padding: 32px 24px 32px 24px;
   width: 100%;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 32px 12px 32px 12px;
 }
 
 #mainleft {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  vertical-align: top;
   width: 60%;
   font-family: Avenir, Helvetica, sans-serif;
   line-height: 1.4;
@@ -284,50 +293,100 @@ h3 {
 
 #mainleft img {
   display: block;
-  width: 100%;
-  max-height: 400px;
+  max-width: 100%;
   height: auto;
+  padding-bottom: 16px;
 }
 
 #mainlefttext {
-  padding: 0px 24px 0px 24px;
+  font-family: Crimson, Georgia, serif;
 }
 
-#mainleft h4 {
-  font-size: 24px;
-  font-weight: 400px;
+#mainlefttext h4 {
+  font-size: 32px;
+  font-weight: 800px;
+  padding-bottom: 12px;
 }
 
-#mainleft h5 {
+#mainlefttext h5 {
   font-size: 18px;
   font-weight: 100px;
+  padding-bottom: 12px;
 }
 
-#mainleft h6 {
-  font-size: 14px;
-  font-weight: 400px;
+#mainlefttext h6 {
+  font-family: Avenir, Helvetica, sans-serif;
+  font-size: 12px;
+  font-weight: bold;
 }
 
 #mainright {
-  display: block;
+  display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  max-width: 40%;
+  justify-content: space-between;
+  width: 40%;
+  max-width: 350px;
   text-align: left;
   line-height: 2.8rem;
-  padding: 24px 24px 24px 24px;
+  padding: 0px 24px 24px 24px;
 }
 
 #mainrightsmall {
-  display: block;
-  flex-direction: column;
+  display: flex;
+  flex-direction: row;
+  background-color: #ffffff;
+  border: 1px solid #98002e;
+  margin-bottom: 10px;
 }
 
+#mainrightsmallimg {
+  display: flex;
+  flex-direction: column;
+  width: 35%;
+  height: auto;
+  justify-content: center;
+  align-content: center;
+}
 
+#mainrightsmallimg img {
+  width: 80%;
+  max-width: 400px;
+  height: auto;
+  padding: 10%;
+}
 
+#mainrightsmallcontent {
+  display: block;
+  flex-direction: column;
+  flex-shrink: 1.5;
+  width: 65%;
+  padding: 10px 10px 10px 10px;
+  font-family: Avenir, Helvetica, sans-serif;
+  color: #98002e;
+  line-height: 1rem;
+}
 
-@media screen and (max-width: 540px) {
+#mainrightsmallcontent h4 {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+#mainrightsmallcontent h5 {
+  font-size: 14px;
+  font-weight: normal;
+}
+
+#mainrightsmallcontent a {
+  font-size: 14px;
+  font-weight: bold;
+  color: #c7bcac;
+}
+
+#mainentry {
+  display: none;
+}
+
+@media screen and (max-width: 550px) {
 
   #main {
     display: block;
@@ -349,6 +408,14 @@ h3 {
     padding: 0px 0px 0px 0px;
   }
 
+  #mainlefttext {
+    padding: 0px 16px 0px 16px;
+  }
+
+  #mainlefttext h4 {
+
+  }
+
   #main img {
     display: block;
     height: auto;
@@ -356,6 +423,340 @@ h3 {
   }
 
   #mainright {
+    display: flex;
+    width: 100%;
+    max-width: 100%;
+    padding: 0px 0px 0px 0px;
+  }
+
+  #mainrightsmall {
+    display: none;
+  }
+
+  #mainentry {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border: solid 1px #98002e;
+    background-color: #ffffff;
+    justify-content: center;
+    padding: 16px 5% 16px 5%;
+  }
+
+  #mainentryimg img {
+    display: block;
+    width: 90%;
+  }
+
+  #mainentrycontent {
+    display: block;
+    width: 100%;
+    margin-top: 16px;
+    font-family: Avenir, Helvetica, sans-serif;
+    line-height: 1.2;
+    justify-content: center;
+  }
+
+  #mainentrycontent h4 {
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  #mainentrycontent h5 {
+    font-size: 14px;
+    font-weight: normal;
+  }
+
+  #mainentrycontent a {
+    font-size: 14px;
+    font-weight: bold;
+    color: #c7bcac;
+  }
+}
+
+/* SIXBOX | SIXBOX | SIXBOX | SIXBOX  */
+/* SIXBOX | SIXBOX | SIXBOX | SIXBOX  */
+/* SIXBOX | SIXBOX | SIXBOX | SIXBOX  */
+/* SIXBOX | SIXBOX | SIXBOX | SIXBOX  */
+/* SIXBOX | SIXBOX | SIXBOX | SIXBOX  */
+
+#sixbox {
+  display: block;
+  position: relative;
+  top: 64px;
+  font-family: Crimson, Georgia, serif;
+  background-color: #d2d2d2;
+  justify-content: center;
+}
+
+#sixbox h6 {
+  padding-top: 32px;
+  text-align: center;
+  font-family: Crimson, Georgia, serif;
+  font-size: 32px;
+  color: #98002e;
+}
+
+#six {
+  display: inline-block;
+  flex-direction: column;
+  width: 27%;
+  height: auto;
+  margin: 16px 16px 16px 16px;
+  border: 1px solid #98002e;
+  vertical-align: top;
+}
+
+#sixtop {
+  display: block;
+  height: 50%;
+}
+
+#sixtop img {
+  width: 100%;
+  height: auto;
+}
+
+#sixbottom {
+  display: block;
+  padding: 16px 16px 16px 8px;
+  height: 50%;
+  font-family: Avenir, Helvetica, sans-serif;
+  text-align: left;
+  background-color: #bc9b6a;
+  line-height: 1.4;
+}
+
+#sixbottom h1 {
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: bold;
+  padding-bottom: 8px;
+}
+
+#sixbottom h2 {
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: normal;
+  padding-bottom: 8px;
+  margin-bottom: 0px;
+}
+
+#sixmobile {
+  display: none;
+}
+
+@media screen and (max-width: 600px){
+
+  #sixbox {
+    display: none;
+  }
+
+  #sixmobile {
+    display: block;
+    position: relative;
+    top: 64px;
+    background-color: #d2d2d2;
+    padding: 8px 8px 8px 8px;
+    justify-content: center;
+  }
+
+  #sixmobilesubj {
+    display: block;
+    width: 85%;
+    text-align: left;
+    background-color: #bc9b6a;
+    line-height: 1.4;
+    margin: 8px 0px 8px 0px;
+    padding: 16px 16px 16px 16px;
+  }
+
+  #sixmobilesubj h1 {
+    font-family: Avenir, Helvetica, sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    padding-bottom: 8px;
+  }
+
+  #sixmobilesubj h2 {
+    font-family: Avenir, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+    padding-bottom: 8px;
+    margin-bottom: 0px;
+  }
+}
+
+/* THESIS | THESIS | THESIS | THESIS */
+/* THESIS | THESIS | THESIS | THESIS */
+/* THESIS | THESIS | THESIS | THESIS */
+/* THESIS | THESIS | THESIS | THESIS */
+/* THESIS | THESIS | THESIS | THESIS */
+
+
+#thesisleft {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  vertical-align: top;
+  width: 60%;
+  font-family: Avenir, Helvetica, sans-serif;
+  line-height: 1.4;
+}
+
+#thesisleft img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  padding-bottom: 16px;
+}
+
+#thesisleft video {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  padding: 0px 0px 16px 0px;
+}
+
+#thesislefttext h4 {
+  font-family: Crimson, Georgia, serif;
+  font-size: 32px;
+  font-weight: 800px;
+  padding-bottom: 12px;
+}
+
+#thesislefttext h5 {
+  font-family: Crimson, Georgia, serif;
+  font-size: 18px;
+  font-weight: 100px;
+  padding-bottom: 12px;
+}
+
+#thesislefttext h6 {
+  font-family: Avenir, Helvetica, sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+#thesisright {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 40%;
+  max-width: 350px;
+  text-align: left;
+  line-height: 2.8rem;
+  padding: 0px 24px 24px 24px;
+}
+
+#thesisrightsmall {
+  display: flex;
+  flex-direction: row;
+  background-color: #ffffff;
+  border: 1px solid #98002e;
+  margin-bottom: 10px;
+}
+
+#thesisrightsmallimg {
+  display: flex;
+  flex-direction: column;
+  width: 35%;
+  height: auto;
+  justify-content: center;
+  align-content: center;
+}
+
+#thesisrightsmallimg img {
+  width: 80%;
+  height: auto;
+  padding: 10%;
+}
+
+#thesisrightsmallcontent {
+  display: block;
+  flex-direction: column;
+  flex-shrink: 1.5;
+  width: 65%;
+  padding: 10px 10px 10px 10px;
+  font-family: Avenir, Helvetica, sans-serif;
+  color: #98002e;
+  line-height: 1rem;
+}
+
+#thesisrightsmallcontent h4 {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+#thesisrightsmallcontent h5 {
+  font-size: 14px;
+  font-weight: normal;
+}
+
+#thesisrightsmallcontent a {
+  font-size: 14px;
+  font-weight: bold;
+  color: #c7bcac;
+}
+
+#thesisrightmobile {
+  display: none;
+}
+
+@media screen and (max-width: 600px){
+
+  #thesisleft {
     display: block;
     width: 100%;
   }
+
+  #thesisright {
+    display: none;
+  }
+
+  #thesisrightmobile {
+    display: block;
+    width: 100%;
+  }
+
+  #thesisentrymobile {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border: solid 1px #98002e;
+    background-color: #ffffff;
+    justify-content: center;
+    padding: 16px 5% 16px 5%;
+  }
+
+  #thesisentrymobileimg img {
+    display: block;
+    width: 90%;
+  }
+
+  #thesisentrymobilecontent {
+    display: block;
+    width: 100%;
+    margin-top: 16px;
+    font-family: Avenir, Helvetica, sans-serif;
+    line-height: 1.2;
+    justify-content: center;
+  }
+
+  #thesisentrymobilecontent h4 {
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  #thesisentrymobilecontent h5 {
+    font-size: 14px;
+    font-weight: normal;
+  }
+
+  #thesisentrymobilecontent a {
+    font-size: 14px;
+    font-weight: bold;
+    color: #c7bcac;
+  }
+}
